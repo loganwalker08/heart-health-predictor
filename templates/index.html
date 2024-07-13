@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Health Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="header-container">
+        <h1>Heart Health Predictor</h1>
+        <img src="{{ url_for('static', filename='heart_icon.jpg') }}" alt="Heart Icon" class="header-icon">
+    </div>
+    <div class="form-container">
+        <form action="{{ url_for('predict') }}" method="post">
+            <label for="age">Age :</label>
+            <input type="text" id="age" name="age" required>
+            <label for="cp">Chest Pain Type (cp) :</label>
+            <input type="text" id="cp" name="cp" required>
+            <label for="ca">Number of Major Vessels (ca) :</label>
+            <input type="text" id="ca" name="ca" required>
+            <label for="thalach">Maximum Heart Rate Achieved (thalach) :</label>
+            <input type="text" id="thalach" name="thalach" required>
+            <label for="oldpeak">ST Depression Induced by Exercise (oldpeak) :</label>
+            <input type="text" id="oldpeak" name="oldpeak" required>
+            <label for="thal">Thalassemia (thal) :</label>
+            <input type="text" id="thal" name="thal" required>
+            <label for="trestbps">Resting Blood Pressure (trestbps) :</label>
+            <input type="text" id="trestbps" name="trestbps" required>
+            <label for="chol">Serum Cholesterol (chol) :</label>
+            <input type="text" id="chol" name="chol" required>
+            <label for="exang">Exercise Induced Angina (exang) :</label>
+            <input type="text" id="exang" name="exang" required>
+            <label for="slope">Slope of the Peak Exercise ST Segment (slope) :</label>
+            <input type="text" id="slope" name="slope" required>
+            <input type="submit" value="PREDICT">
+        </form>
+    </div>
+</body>
+</html>
